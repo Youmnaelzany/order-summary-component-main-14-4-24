@@ -4,12 +4,94 @@ import "@/styles/globals.css";
 ---
 
 <Layout title="Frontend Mentor | Order summary card">
-  <main class="mx-6 my-[4.44rem] lg:mx-auto lg:mt-[6.38rem] lg:mb-[6.31rem] flex justify-center items-center">
-    <section class="card w-[20.4375rem] h-[35.4375rem] rounded-lg bg-white"></section>
+  <main class="">
+    <section>
+      <picture>
+        <source
+          media="(768px)"
+          srcset="/images/pattern-background-desktop.svg"
+        />
+        <img
+          src="/images/pattern-background-mobile.svg"
+          alt=""
+          class="absolute -top-[18.5rem] left-0 -z-10 w-full object-cover"
+        />
+      </picture>
+    </section>
+    <section
+      class="card mx-6 my-[4.44rem] flex h-[35.4375rem] w-[20.4375rem] flex-col items-center rounded-[1.25rem] bg-white text-center lg:mx-auto lg:mb-[6.31rem] lg:mt-[6.38rem] lg:h-[43.5625rem] lg:w-[28.125rem]"
+    >
+      <!-- Card Image -->
+      <div class="">
+        <img
+          src="/images/illustration-hero.svg"
+          alt="illustration-hero"
+          class="hero-img"
+        />
+      </div>
+      <!-- Card Description -->
+      <div
+        class="flex w-[20.438rem] flex-col gap-4 px-8 pb-6 pt-8 lg:w-[26.125rem] lg:gap-[1.06rem] lg:px-12 lg:pb-5 lg:pt-12"
+      >
+        <h1
+          class="text-[1.375rem] font-black leading-normal text-[#1F2E55] lg:text-[1.75rem]"
+        >
+          Order Summary
+        </h1>
+        <p
+          class="text-[0.9375rem] font-normal leading-[1.5625rem] text-[#717FA6] lg:text-base lg:leading-relaxed"
+        >
+          You can now listen to millions of songs, audiobooks, and podcasts on
+          any device anywhere you like!
+        </p>
+      </div>
+      <!-- Annual Plan -->
+      <div
+        class="flex h-[5.0625rem] w-[17.4375rem] items-center justify-between rounded-[0.6875rem] bg-[#f7f9ff] px-4 pb-4 pt-[1.06rem] lg:h-[6.125rem] lg:w-[22.125rem] lg:px-6 lg:py-[1.56rem]"
+      >
+        <img src="/images/icon-music.svg" alt="" class="" />
+        <div class="flex flex-col items-center justify-between">
+          <h2
+            class="text-sm font-black leading-normal text-[#1F2E55] lg:text-base"
+          >
+            Annual Plan
+          </h2>
+          <h3
+            class="text-sm font-normal leading-normal text-[#717FA6] lg:text-base"
+          >
+            $59.99/year
+          </h3>
+        </div>
+        <a
+          href="#"
+          class="underline-[#382AE1] hover:underline-[#766CF1] cursor-pointer text-sm font-bold leading-normal text-[#382AE1] underline transition-colors duration-500 ease-in-out hover:text-[#766CF1]"
+          >Change</a
+        >
+      </div>
+      <!-- Payment Button -->
+      <div class="">
+        <button
+          type="submit"
+          class="my-6 flex h-[3.125rem] w-[17.4375rem] cursor-pointer items-center justify-center rounded-[0.6875rem] bg-[#382AE1] text-[0.9375rem] font-black leading-normal text-white transition-colors duration-500 ease-in-out hover:bg-[#766CF1] lg:h-[3.125rem] lg:w-[22.125rem]"
+          >Proceed to Payment</button
+        >
+        <h3
+          class="cursor-pointer text-[0.9375rem] font-black leading-normal text-[#717FA6] transition-colors duration-500 ease-in-out hover:text-[#1F2E55]"
+        >
+          Cancel Order
+        </h3>
+      </div>
+    </section>
   </main>
 </Layout>
 
 <style>
+  body {
+    background-color: #e0e8ff;
+  }
+  .hero-img {
+    border-radius: 1.25rem 1.25rem 0rem 0rem;
+  }
   .card {
     box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.15);
   }
